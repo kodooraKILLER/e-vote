@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.ans{
+display: none;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+></script>
+<script>
+$(document).ready(function()
+{
+	$("button").click(function()
+	{
+	$(".ans").slideDown();
+	var correct=0;
+	var givenAns1=$(":input[name=\"q1\"]:checked").val();
+	if(givenAns1=="a2")correct++;
+		
+	else $("#ab").css({"background-color":"red"});
+	givenAns1=$("input:radio[name=\"q2\"]:checked").val();
+	
+	if(givenAns1=="a1")correct++;
+	else $("radio[name=\"q2\"]:checked").css("background-color","red");
+	$("#result").text("correct answers: "+correct);
+	});
+});
+
+
+
+</script>
+</head>
+<body>
+<p id="ab">I am an idiot</p>
+<br>
+<input type="radio" name="q1" value="a1"/>True<br/>
+<input  type="radio" name="q1" value="a2"/>False<br/>
+<p class="ans">correct answer : 1<br>reason: this is good</p>
+
+<p>I am a good boy</p>
+<br>
+<input type="radio" name="q2" value="a1"/>True<br/>
+<input type="radio" name="q2" value="a2"/>False<br/>
+<p class="ans">correct answer : 1<br>reason: this is good</p>
+<button>Answer</button>
+
+<p id="result"></p>
+</body>
+</html> 

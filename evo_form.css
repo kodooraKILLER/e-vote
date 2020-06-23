@@ -1,0 +1,52 @@
+body
+{
+	font-size:24px;
+	font-family: 'Arial';
+	color:black;
+	position: absolute;
+	width: 100%;
+	text-align:center;
+	margin: 0px auto;
+}
+
+body>header
+{
+		position: relative;
+top: 0px;
+	background-color: blue;
+	vertical-align: middle;
+	text-align:center;
+	height: 100px;	
+}
+
+header>nav
+{
+	width: 65%;
+	position: absolute;
+	top: 0px;
+	text-align: right;
+	right: 10px;
+	height: 100%;
+	
+}
+nav ul
+{
+	list-style-type:none;
+	position: relative;
+	top: 0px;
+	
+	right: 25px;
+	height: 85%;
+	vertical-align:bottm;
+	
+}
+nav li
+{
+	position:relative;
+	top: 40%;
+	font-size: 20px;
+
+	margin: 0px 30px 20px 30px;
+	display: inline;
+	color: white;
+}

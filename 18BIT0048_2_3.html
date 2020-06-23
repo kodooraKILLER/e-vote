@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>18BIT0048 Q2 subquestion 3</title>
+        <script>
+		
+function ValidateEmail(uemail)
+{
+var mailformat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zAZ0-9]{2,4})+$/;
+if(uemail.value.match(mailformat))
+{
+return true; }
+else {
+alert("You have entered an invalid email address!");
+uemail.focus();
+return false; } 
+}
+
+function allnumeric(umob)
+{
+var numbers = /^[0-9]+$/;
+if(umob.value.match(numbers)&&umob.value.length==10)
+{
+return true;
+}
+else
+{
+alert('MObile code must have numeric characters only, and have a length of 10');
+umob.focus();
+return false;
+}
+}
+function regcheck(regno)
+{
+
+    var letters = /^([0-9]{2}[A-Z]{3}[0-9]{4})+$/;
+    if(regno.value.length==9&&regno.value.match(letters))
+            return true;
+    else
+    {
+        alert("invalid reg no");
+		regno.focus();
+		return false;
+    }
+
+}
+function allLetter(uname)
+{
+var letters = /^[A-Za-z ]+$/;
+if(uname.value.match(letters))
+{
+return true;
+}
+else {
+alert('Username must have alphabet characters only');
+uname.focus();
+return false; } 
+}
+    
+		function check()
+{
+
+var umob=document.getElementById("mobile");
+var uname=document.getElementById("stname");
+var uemail=document.getElementById("email");
+var regno=document.getElementById("regno");
+var flag=false;
+if(regcheck(regno)) 
+flag=true&&flag;
+else flag= false;
+
+if(allLetter(uname))
+flag=true&&flag;
+else flag= false;
+
+if(allnumeric(umob))
+flag=true&&flag;
+else flag= false;
+
+if(ValidateEmail(uemail))
+flag=true&&flag;
+else flag= false;
+return flag;
+
+}
+function addr_chk()
+{
+    document.getElementById("paddr").value=document.getElementById("taddr").value
+    document.getElementById("paddr").disabled = true
+}
+		
+		
+		</script>
+		<style>
+		#ans1,#ans2,#ans3,#ans4
+		{
+		color: red;
+		}
+		</style>
+    </head>
+    <body style="text-align: left;">
+        <form action="" method="post">
+            Name:
+            <input type="text" name="stname" id="stname">
+            <br>Register Number:
+            <input type="text" name="regno" id="regno">
+            <br>DOB:
+            <input type="date" name="dob" id="dob">
+            <br>
+            Program:
+            <input type="text" name="prog" id="prog">
+            <br>
+            Email:
+            <input type="text" name="email" id="email">
+            <p>Temporary Address:
+                <input type="text" name="taddr" id="taddr">
+            </p>
+            <p>Permanent Address:
+                <input type="text" name="paddr" id="paddr">
+            </p>
+            <input type="checkbox" id="eqality" onclick="addr_chk()"> Permanent Address is equal to Temporary Address
+            <br>
+            Phone Number:
+            <input type="text" name="mobile" id="mobile">
+            <button type="button" onclick="return check()">Submit</button>
+        </form>
+    </body>
+</html>

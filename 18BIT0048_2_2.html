@@ -1,0 +1,146 @@
+<html>
+<head>
+<style>.slideshow {
+width: 90%;
+height: 50%;
+display: none;
+
+}
+
+#first{
+width: 100%;
+text-align: right;
+}
+
+button
+{
+
+text-align: center;
+}
+#second{
+width: 49%;
+float: left;
+}
+
+#third{
+width: 49%;
+float: right;
+}
+
+
+</style>
+<title>18BIT0048_2_2</title>
+<script>
+function startTime() 
+{
+  var today = new Date(); 
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById("time").innerHTML ="Digital Clock: "+today.toDateString()+" "+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) 
+{
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+
+</head>
+<body onload="startTime()">
+<div id="first">
+<p id="time"></p>
+</div>
+<div id="second">
+
+
+  <img class="mySlides" src="img_lights.jpg" style="width:100%">
+  <img class="mySlides" src="img_mountains.jpg" style="width:100%">
+  <img class="mySlides" src="img_snowtops.jpg" style="width:100%">
+  <img class="mySlides" src="img_forest.jpg" style="width:100%">
+
+  <button onclick="plusDivs(-1)">&#10094; Previous slidePic</button>
+  <button onclick="plusDivs(1)">Next slidePic &#10095;</button>
+</div>
+<div id="third">
+<p id="myP">Sample paragraph:<br /><br />
+Lorem ipsum dolor sit amet, nam et habeo assueverit intellegebat. Aliquip mnesarchum per ne, duo autem accusam an. Ius enim habemus laboramus in. An mel atqui saperet, ad complectitur conclusionemque eum.
+
+Vel cu commune torquatos mediocritatem, unum nobis qui cu. Mea eu dicat dictas, eos propriae omnesque no. Eum no altera mollis constituam, eu mea dicta ornatus mandamus, no accusata patrioque nam. Usu at copiosae partiendo, ea diceret epicurei oportere est. Quod alia hendrerit vim eu, et noluisse probatus pri, vim et movet pertinacia persequeris. Vim ei agam deleniti theophrastus, pri eu libris latine alterum.
+</p>
+
+<select id="Cc">
+  <option>red</option>
+  <option>green</option>
+  <option>yellow</option>
+  <option>blue</option>
+  <option>black</option>
+  <option>white</option>
+  
+</select>
+
+<select id="Ss">
+  <option>10px</option>
+  <option>15px</option>
+  <option>20px</option>
+  <option>25px</option>
+  <option>30px</option>
+  <option>35px</option>
+  
+</select>
+
+<select id="Ff">
+  <option>Times New Roman</option>
+  <option>Georgia</option>
+  <option>Verdana</option>
+  <option>Lucida Console</option>
+  <option>Courier New</option>
+  <option>Arial</option>
+  
+</select>
+
+<button onclick="myFunction();">change style</button>
+ </div>
+<script>
+
+function myFunction() {
+var selectTag=document.getElementById("Ss");
+  var listValue = selectTag.options[selectTag.selectedIndex].text;
+  document.getElementById("myP").style.fontSize = listValue;
+var selectTag2=document.getElementById("Ff");
+  var listValue2 = selectTag2.options[selectTag.selectedIndex].text;
+  document.getElementById("myP").style.fontFamily = listValue2;
+var selectTag3=document.getElementById("Cc");
+  var listValue3 = selectTag3.options[selectTag.selectedIndex].text;
+  document.body.style.backgroundColor = listValue3;
+
+}
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>18BIT0048 q1</title>
+<script src="angular.min.js"></script>
+<style>
+div{
+border: 1px solid blue;
+}
+input.ng-invalid
+{
+background-color:orange;
+}
+input.ng-valid
+{
+background-color:green;
+}
+</style>
+</head>
+<body ng-app="">
+<form name="myform"> 
+<div style="width:30.55%;color:blue;height:4%"><b>Shipping Address</b></div>
+<div style="width:30%;background-color:#FFE5B4;padding:4px">
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="red">*</font><b>Name</b>:
+<input type="text" name="myname" ng-model="myname" ng-pattern="/^[a-zA-Z]{3,30}$/" required>
+<span style="color:red" ng-show="myform.myname.$touched &&myform.myname.$error.required">The name is required.</span>
+</p>
+
+<p>
+<font color="red">*</font><b>Address</b>:
+<input type="text" name="myAddress" ng-model="myAddress" ngminlength="10" ngmaxlength="30" ng-required="true">
+<span style="color:red" ng-show="myform.myAddress.$touched &&myform.myAddress.$error.required">The address is required.</span>
+</p>
+
+<p>
+&nbsp&nbsp<b>Address</b>:
+<input type="text" name="myaddress" ng-model="myaddress" ngminlength="10" ng-maxlength="30">
+&nbsp <font color="black" size="2"><strong>(optional)</strong></font>
+</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="red">*</font><b>City</b>:
+<input type="text" name="mycity" ng-model="mycity" ng-pattern="/^[a-zA-Z]{3,30}$/" required>
+<span style="color:red" ng-show="myform.mycity.$touched &&myform.mycity.$error.required">The city name is required.</span>
+</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="red">*</font><b>State</b>:
+<input type="text" name="mystate" ng-model="mystate" ng-pattern="/^[a-zA-Z]{6,30}$/" required>
+<span style="color:red" ng-show="myform.mystate.$touched &&myform.mystate.$error.required">The state name is required.</span>
+</p>
+
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="red">*</font><b>Zip</b>:
+<input type="text" name="myzip" ng-model="myzip" ng-pattern="/^[0-9]{6}$/" required> 
+<span style="color:red" ng-show="myform.myzip.$touched &&myform.myzip.$error.required">The zip is required.</span>
+</p>
+</div>
+<input type="submit">
+</form>
+<h5>Name:{{myform.myname.$valid}}</h5>
+<h5>Address:{{myform.myAddress.$valid}}</h5>
+<h5>Address:{{myform.myaddress.$valid}}</h5>
+<h5>City:{{myform.mycity.$valid}}</h5>
+<h5>State:{{myform.mystate.$valid}}</h5>
+<h5>Zip:{{myform.myzip.$valid}}</h5>
+</body>
+</html>

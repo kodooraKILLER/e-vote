@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <script>
+		function check()
+{
+    var m=document.getElementById("male").value
+    var fm=document.getElementById("female").value
+    var n=document.getElementById("tname").value
+    if(n=="Kovai Express")
+    {
+        var t=10
+        if(m+fm<=t)
+        {
+            document.write("Tickets are available")
+        }
+        else
+        {
+            document.write("Tickets arent available")
+        }
+    }
+    else if(n=="Shatabdi Express")
+    {
+        var t=76
+        if(m+fm<=t)
+        {
+            document.write("Tickets are available")
+        }
+        else
+        {
+            document.write("Tickets arent available")
+        }
+    }
+    else if(n=="Duronto Express")
+    {
+        var t=23
+        if(m+fm<=t)
+        {
+            document.write("Tickets are available")
+        }
+        else
+        {
+            document.write("Tickets arent available")
+        }
+    }
+    else
+    {
+        var t=234
+        if(m+fm<=t)
+        {
+            document.write("Tickets are available")
+        }
+        else
+        {
+            document.write("Tickets arent available")
+        }
+    }
+}
+
+		</script>
+    </head>
+    <body style="padding-left: 500px;padding-top: 100px">
+        <form>
+            From: 
+            <input type="text" name="from" id="from">
+            <br><br>
+            To:
+            <input type="text" name="to" id="to">
+            <br><br>
+            Train Name:
+            <select name="tname" id="tname">
+                <option>Kovai Express</option>
+                <option>Chennai Express</option>
+                <option>Duronto Express</option>
+                <option>Shatabdi Express</option>
+            </select><br><br>
+            Date:
+            <input type="date" name="date" id="date">
+            <br><br>
+            Male:
+            <input type="number" id="male">
+            <br><br>
+            Female:
+            <input type="number" id="female">
+            <br><br>
+            <button onclick="check()">Check Availability</button>
+        </form>
+    </body>
+</html>

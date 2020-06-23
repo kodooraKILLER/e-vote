@@ -1,0 +1,13 @@
+html>
+<head>
+<base href='http://apod.nasa.gov/apod/'>
+<title>test</title>
+<style>
+body { margin: 0 }
+textarea { outline: none; padding: 2em; width: 100%; height: 100% }
+</style>
+</head>
+<body onload="w=window.open('#'); x=document.getElementById('t'); a='<html>\n'; b='\n</html>'; setTimeout('x.innerHTML=a+w.document.documentElement.innerHTML+b; w.close()',2000)">
+<textarea id=t></textarea>
+</body>
+</html>

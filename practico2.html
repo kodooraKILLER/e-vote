@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+
+$(document).ready(function(){
+$("p:empty:not('.ignore')").css("color","red");
+$("p:contains('REPLACE_ME')").css("color","blue");
+$("div:has('.special')").css("color","green");
+$(":header").css("color","yellow");
+$("li:visible").css("color","cyan");
+
+$("#square").animate({opacity:'0.8',top:'+=250px'},"slow");
+
+});
+
+</script>
+</head>
+<body>
+<div>
+<p></p>
+<h1>hello world</h1>
+<p>REPLACE_ME</p>
+<p class="ignore">Para 3</p>
+</div>
+<div>
+<p class='.special'>Para 1</p>
+</div>
+<ul>
+<li style="display: none">gm</li>
+<li >gmn</li>
+<li >gem</li>
+</ul>
+
+<p id="#square">im moving</p>
+
+</body></html>

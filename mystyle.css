@@ -1,0 +1,18 @@
+
+#first{
+width: 100%;
+text-align: right;
+}
+#second{
+width: 49%;
+float: left;
+}
+
+#third{
+width: 49%;
+float: right;
+}
+.slideshow {
+width: 90%;
+display: none;
+}	

@@ -1,0 +1,38 @@
+<html>
+    <head>
+	<title> 18BIT0048-7subq of 2nd assesment</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    </head>
+    <body>
+        Divisible By: <input type="text" id="div">
+        <button>Delete</button>
+        <br><br>
+        Click a button:
+        <button id="1">11</button>
+        <button id="2">22</button>
+        <button id="3">34</button>
+        <button id="4">42</button>
+        <button id="5">50</button>
+        <button id="6">63</button>
+        <button id="7">71</button>
+        <button id="8">85</button>
+        <button id="9">94</button>
+        <button id="10">105</button>
+        <script>
+            $(document).ready(function(){
+                $(document).on("click","button",function(){
+                    var dividend=$("#div").val()
+                    var num=[11,22,34,42,50,63,71,85,94,105]
+                    for(var i=0;i<num.length;i++)
+                    {
+                        if(num[i]%dividend==0)
+                        {
+                            var k=i+1
+                            $("#"+k).hide()
+                        }
+                    }
+                })
+            })
+        </script>
+    </body>
+</html>

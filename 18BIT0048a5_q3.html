@@ -1,0 +1,51 @@
+<!doctype html>
+<html >
+<head>
+ <title>18BIT0048 q3</title>
+ <script
+src="angular.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+ <script src="script.js"></script>
+
+ <style>
+ div{
+ background-color:#D1D0CE;
+ color:#000; 
+ borderwidth:3px;
+ border-color:lightgreen;
+ border-style:solid;
+ height:100px
+}
+</style>
+</head>
+<body ng-app="myApp">
+<table style="width:100%;" border="1" bordercolor="transparent" cellpadding="4px">
+ <tr bgcolor="#D1D0CE">
+ <th align="left">#</th>
+ <th align="left"><b>Order No.</b></th>
+ <th align="left"><b>Details</b></th>
+ <th align="left"><b></b></th>
+ </tr>
+ <tr bgcolor="#E5E4E2">
+ <td align="left">1</td>
+ <td align="left">1234</td>
+ <td align="left">15<sup>n</sup>Samsung Laptop</td>
+ <td><b><a href="#!first">show details</a></b></td>
+ </tr>
+ <tr bgcolor="#D1D0CE">
+ <td>2</td>
+ <td>5412</td>
+ <td>2TB Segate Hard drive</td>
+ <td><b><a href="#!second">show details</a></b></td>
+ </tr>
+ <tr bgcolor="#E5E4E2">
+ <td>3</td>
+ <td>9874</td>
+ <td>D-link router</td>
+ <td><b><a href="#!third">show details</a></b></td>
+ </tr>
+</table> <br>
+<div ng-view></div>
+
+</body>
+</html>

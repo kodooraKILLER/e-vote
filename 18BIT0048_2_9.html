@@ -1,0 +1,142 @@
+<!doctype html> 
+<html>
+    <head> 
+        <title>18BIT0048-9subq of assesment 2</title> 
+        <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+        <link rel="stylesheet" href="style.css"> 
+        <style >
+            CSS File- 
+body{ 
+    padding: 0; 
+    margin: 0; 
+    background: rgb(210, 212, 212); 
+} 
+h1{ 
+    text-align: center; 
+    font-size: 350%; 
+    width: 100%; 
+    background: rgb(55, 65, 95); 
+    margin: 0; 
+    padding: 2% 0; 
+    color: cornsilk; 
+} 
+form{ 
+    width: 100%; 
+    padding: 0%; 
+    margin-left: 0%; 
+} 
+ 
+div{ 
+    margin: 1%; 
+} 
+ 
+input{ 
+    display: inline; 
+} 
+ 
+input[type=text]{ 
+    width: 250px; 
+}
+        </style>
+
+    </head> 
+
+    <body> 
+        <header> 
+            <h1>Event registration form</h1> 
+        </header> 
+        <form> 
+            <div> 
+                <label for="firstname" style="margin-left: 25%;">First Name</label> 
+                <input type="text" name="firstname" id="firstname" style="margin-left: 1%;" required> 
+            </div> 
+            <div> 
+                <label for="lastname" style="margin-left: 25%;">Last Name</label> 
+                <input type="text" name="lastname" id="lastname" style="margin-left: 1%;" required> 
+            </div> 
+            <div> 
+                <label for="mailAdd" style="margin-left: 22.5%;">Mailing Address</label> 
+                <input type="text" name="mailAdd" id="mailAdd" style="margin-left: 1%;" required> 
+            </div> 
+            <div> 
+                <label for="city" style="margin-left: 27.75%;">City</label> 
+                <input type="text" name="city" id="city" style="margin-left: 1%;" required> 
+            </div> 
+            <div> 
+                <label for="state" style="margin-left: 27.5%;">State</label> 
+                <select name="state" id="state"  style="margin-left: 1%;"> 
+                    <option value="assam">Assam</option> 
+                    <option value="rajasthan">Rajasthan</option> 
+                    <option value="Tamil Nadu">Tamil Nadu</option> 
+                    <option value="gujrat">Gujrat</option> 
+                </select> 
+            </div> 
+            <div> 
+                <label for="zip" style="margin-left: 25.75%;">Zip code</label> 
+                <input type="text" name="zip" id="zip" style="margin-left: 1%;" required> 
+            </div>           
+            <div> 
+                <label for="speaking" style="margin-left: 21%;">Are you speaking at<br > <span style="margin-left: 23%;">the conference</span> </label> 
+                <input type="radio" name="speaking" id="yes" value="yes"  style="margin-left: 1%;">yes 
+                <input type="radio" name="speaking" id="no" value="no">no 
+            </div> 
+            <div> 
+                <label for="pass" style="margin-left: 22%;">Conference Pass</label> 
+                <div style="margin-left: 30%;"> 
+                    <input type="radio" name="pass" value="1-day Pass">1-day Pass<br> 
+                    <input type="radio" name="pass" value="2-day Pass">2-day Pass<br> 
+                    <input type="radio" name="pass" value="3-day Pass">3-day Pass<br> 
+                    <input type="radio" name="pass" value="4-day Pass">4-day Pass 
+                </div> 
+            </div> 
+            <div> 
+                <label for="meal" style="margin-left: 22%;">Meal preference</label> 
+                <select name="meal" id="meal" style="margin-left: 1%;"> 
+                    <option value="veg"></option> 
+                    <option value="veg">VEG</option> 
+                    <option value="nonveg">NON-VEG</option> 
+                </select> 
+            </div> 
+            <div style="width: 100%; background: rgb(41, 49, 71); margin: 0; padding: 2%;">  
+                <input type="submit" value="submit" id="submit"  style=" width: 7%; margin-left: 30%;"> 
+            </div> 
+             
+        </form> 
+ 
+        <script >
+            
+            function takeInput(){ 
+    var firstname = $('#firstname').val() 
+    var lastname = $('#lastname').val() 
+    var mailAdd = $('#mailAdd').val() 
+    var city = $('#city').val() 
+    var state = $('#state').val() 
+    var zip = $('#zip').val() 
+    var speaking = $("input[name='speaking']:checked").val() 
+    var pass = $("input[name='pass']:checked").val() 
+    var meal = $('#meal').val() 
+ 
+    if(zip.length != 5){ 
+        $('#zip').focus() 
+        alert('zip should be of length 5') 
+    } 
+ 
+    var emailregx = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
+ 
+    if(emailregx.test(mailAdd) == false){ 
+        $('#mailAdd').focus() 
+        alert('invalid email') 
+    } 
+} 
+ 
+$('#submit').click(takeInput) 
+ JSON- 
+ 
+{     "city":["Assam","Delhi","VELLORE","Chennai","Bangalore"] }
+
+
+        </script> 
+    </body> 
+</html>

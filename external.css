@@ -1,0 +1,27 @@
+h1
+{
+	border: 1px solid black;
+	width: 60%;
+}
+body
+{
+	border: 1px solid black;
+}
+#side
+{
+	border: 2px solid black;
+	padding: 7px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin: 20px;
+	width: 20%;
+}
+img
+{
+	width: 25%;
+}
+#content{
+	width: 50%;
+	margin: 30px auto;
+}

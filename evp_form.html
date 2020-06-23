@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>OVP: new election form</title>
+
+<link rel="stylesheet" type="text/css" href="evp_form.css"/>
+
+</head>
+<body>
+<header>
+<div id="logo_title">
+<h1 ><span>O</span>nline <span >V</span>oting <span >P</span>ortal</h1>
+</div>
+<nav>
+<ul>
+<li>Know more</li>
+<li>Contact us</li>
+</ul>
+</nav>
+</header>
+<br >
+
+<section>
+<br >
+
+<marquee >Fill the following details and you are good to go!</marquee>
+
+<br >
+
+<h3>Basic Details</h3>
+<hr size="3" color="darkblue" width="80%"><br><br>
+<table>
+<tr>
+<td>Name of Elections: </td>
+<td><input type="text" name="title" id="title"></td>
+<td class="desc">A catchy title please !</td>
+</tr>
+<tr>
+<td>Date of start: </td>
+<td><input type="date" name="start" id="start"></td>
+<td class="desc">The date when elections should begin</td>
+</tr>
+<tr>
+<td>Date of termination: </td>
+<td><input type="date" name="end" id="end"></td>
+<td class="desc">The date when elections should end</td>
+</tr>
+
+<tr>
+<td></td>
+<td colspan="2"><input type="checkbox" onclick="chk()" name="end_start"> Election starts and ends on same day </td>
+</tr>
+</table>
+<br>
+<h3>Account details</h3>
+
+<hr size="3" color="darkblue" width="80%">
+<br>
+<br>
+<table>
+<tr>
+<td>Election ID: </td>
+<td><input type="text" name="eid" id="eid"></td>
+
+<td class="desc">A combination of numbers and letters only, minimum 4 - maximum 30</td>
+</tr>
+<tr>
+<td>Create password: </td>
+<td><input type="password" name="pass" id="pass"></td>
+
+<td class="desc">minimum 4 - maximum 30</td>
+
+</tr>
+<tr>
+<td>Confirm password: </td>
+<td><input type="password" name="conf" id="conf"></td>
+
+<td class="desc">ensure that this matches with above entered password</td>
+
+</tr>
+</table>
+<br>
+<h3>Candidate details</h3>
+
+<hr size="3" color="darkblue" width="80%">
+<br><br>
+
+<table>
+<tr>
+<td>Candidate list</td>
+<td><ul id="main"></ul></td>
+
+<td class="desc">Enter names of candidates and press "add" to add, while enter names of candidates and press "remove" to remove</td>
+
+</tr>
+<tr>
+<td colspan="2">
+        <input type="text" name = "cand" id="cand"></td>
+        <td><button id="add">Add</button>
+        <button id="remove">Remove</button></td>
+</td>
+</tr>
+
+
+</table>
+<ol>
+<p id="error"></p>
+</ol>
+<br><br>
+<button id="submit" onclick="validate()">Verify and submit</button>
+<button id="reset">Clear all data</button>
+</section>
+<br><br>
+<footer>
+<br>
+<p>
+&copy; 2018-19 all rights reserved. Contact developers for more details</p>
+<address>
+Phone: 000-111-222<br>
+Address: VIT Vellore-018
+
+</address>
+
+<br>
+
+<br>
+</footer>
+
+<script src="evp_form.js"></script>
+</body>
+</html>

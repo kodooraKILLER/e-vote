@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="demo">
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+<script>
+function loadDoc() {
+var txt = '';
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function(){
+  if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
+    txt = xmlhttp.responseText;
+	document.write(hi);
+  }
+};
+xmlhttp.open("GET","hi.txt",true);
+xmlhttp.send();
+
+}
+</script>
+</body>
+</html>

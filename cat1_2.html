@@ -1,0 +1,60 @@
+<html>
+<head>
+</head>
+<body>
+<table bgcolor="cyan" cellpadding="10" cellspacing="10" id="main">
+<tr>
+<td bgcolor="yellow" align="center">
+<h2>
+Speaker info
+</h2>
+<p>
+want to speak at our ted conference?
+<br /> fill out this form</p>
+</td>
+</tr>
+<tr>
+<td bgcolor="pink" align="center">
+<table id="form" cellpadding="10">
+<form action="form.html" method="post"> 
+<tr>
+<td align="right">Name</td>
+<td align="left"><input type="text" name="name" maxlength="25" />
+</td>
+</tr>0
+<tr>
+<td align="right">Email</td>
+<td align="left"><input placeholder="youremail.com" type="text" name="mail" maxlength="25" />
+</td>
+</tr>
+<tr>
+<td align="right">Type of talk</td>
+<td align="left"><input type="radio" name="type" value="main stage" />Main Stage 
+<input type="radio" name="type" value="workshop" />Main stage</td> 
+</tr>
+<tr>
+<td align="right">T-Shirt size</td>
+<td align="left"><select name="shirt"  /><option value="ms">Main Stage</option> 
+<option value="workshop" selected="selected" />workshop</option></select></td> 
+</tr>
+
+<tr>
+<td align="right" style="vertical-align: top" rowspan="3" >Abstract</td>
+<td align="left"><textarea name="description" cols="30" rows="10" /></textarea>
+<br />describe your article</td>
+</tr>
+<tr><td>
+<input type="radio" name="accept" value="accept" />i agree</td></tr>
+<tr><td><input type="submit" value="Fetch" class="button"/>
+</td> 
+
+</tr>
+
+
+
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

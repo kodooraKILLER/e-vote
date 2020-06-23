@@ -1,0 +1,89 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/evp_profile.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+<body ng-app="myApp">
+
+
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <header>
+      <a href="#">My App</a>
+    </header>
+    <ul class="nav">
+      <li>
+        <a href="/profile">
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="#!poller">
+         Poll
+        </a>
+      </li>
+      <li>
+        <a href="#!editer">
+           edit profile
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Events
+        </a>
+      </li>
+      <li>
+        <a href="#">
+         About
+        </a>
+      </li>
+      <li>
+        <a href="#">
+           Services
+        </a>
+      </li>
+      <li>
+        <a href="#">
+           Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <div ng-view></div>
+
+</body>
+</html>
+
+
+
+<p><a href="#/!">Main</a></p>
+
+<a href="#!red">Red</a>
+<a href="#!green">Green</a>
+<a href="#!blue">Blue</a>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/poller", {
+        templateUrl : "/poll"
+    })
+    .when("/editer", {
+        templateUrl : "/edit"
+    })
+    .when("/green", {
+        templateUrl : "green.htm"
+    })
+    .when("/blue", {
+        templateUrl : "blue.htm"
+    });
+});
+</script>
+</body>
+</html>
+

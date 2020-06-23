@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <title>18BIT0048-subq8 of 2nd assesment</title>
+    </head>
+    <body>
+        <h1>My super nifty to-do list</h1>
+        <ul></ul>
+        <input type="text" name = "todo" id="todo">
+        <button id="add">Add</button>
+        <button id="remove">Remove</button>
+        <script>
+            
+            $(document).ready(function(){
+                $("#add").click(function(){
+                    
+                    var sen=$("#todo").val().toLowerCase();
+                    
+				    $("ul").append('<li class="'+sen+'">'+sen+'</li>')
+                    
+                 
+					$("#todo").val("");
+					$("li:even").css({"background-color":"white"})
+                $("li:odd").css({"background-color":"yellow"})
+              
+    
+                })
+            })
+            $(document).ready(function(){
+                $("#remove").click(function(){
+                    console.log("working");
+                    var sen=$("#todo").val().toLowerCase()
+                    $("."+sen).remove();
+					
+					$("#todo").val("");
+					$("li:even").css({"background-color":"white"})
+                $("li:odd").css({"background-color":"yellow"})
+              
+		})
+				
+            })
+        </script>
+    </body>
+</html>
